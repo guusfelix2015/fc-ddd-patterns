@@ -6,10 +6,9 @@ export class Customer {
   _address!: Address;
   _active: boolean = false;
 
-  constructor(id: string, name: string, active: boolean) {
+  constructor(id: string, name: string) {
     this._id = id;
     this._name = name;
-    this._active = active;
     this.validate();
   }
 
