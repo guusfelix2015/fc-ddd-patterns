@@ -10,6 +10,6 @@ customer.activate;
 //ID
 
 // Objeto - Entidade
-const item1 = new OrderItem("1", "item1", 20);
-const item2 = new OrderItem("2", "item2", 30);
-const oder = new Order("1", customer._id, [item1, item2]);
+const item1 = new OrderItem("1", "item1", 20, "p1", 2);
+const item2 = new OrderItem("2", "item2", 30, "p2", 2);
+const oder = new Order("1", customer.id, [item1, item2]);

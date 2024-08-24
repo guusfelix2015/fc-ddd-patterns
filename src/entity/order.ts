@@ -14,6 +14,7 @@ export class Order {
     this.validate();
   }
 
+
   validate() {
     if (this._id.length === 0) {
       throw new Error("Id is required");
@@ -28,7 +29,6 @@ export class Order {
     }
   }
 
-  
   total(): number {
     return this._items.reduce((acc, item) => acc + item.price, 0);
   }
