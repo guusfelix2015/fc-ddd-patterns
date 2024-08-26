@@ -18,12 +18,36 @@ export class Customer {
     this.validate();
   }
 
+  changeAddress(address: Address) {
+    this._address = address;
+  }
+
   get name(): string {
     return this._name;
   }
 
   get id(): string {
     return this._id;
+  }
+
+  get address(): Address {
+    return this._address;
+  }
+
+  get street(): string {
+    return this.street;
+  }
+
+  get number(): number {
+    return this.number;
+  }
+
+  get zip(): string {
+    return this.zip;
+  }
+
+  get city(): string {
+    return this.city;
   }
 
   get rewardPoints(): number {
