@@ -10,6 +10,7 @@ import { Customer } from "../../domain/entity/customer";
 import { Address } from "../../domain/entity/address";
 import { OrderItem } from "../../domain/entity/order_item";
 import { Order } from "../../domain/entity/order";
+import { OrderRepository } from "./order.repository";
 
 describe("Order repository unit tests", () => {
   let sequelize: Sequelize;
@@ -57,12 +58,12 @@ describe("Order repository unit tests", () => {
       items: [
         {
           id: orderItem.id,
-          product_id: product.id,
           name: orderItem.name,
           price: orderItem.price,
           quantity: orderItem.quantity,
-          total: orderItem.price * orderItem.quantity,
+          product_id: product.id,
           order_id: order.id,
+          total: orderItem.price * orderItem.quantity,
         },
       ],
     });

@@ -18,6 +18,14 @@ export class Order {
     return this._id;
   }
 
+  get items(): OrderItem[] {
+    return this._items;
+  }
+
+  get customerId(): string {
+    return this._customerId;
+  }
+
   validate() {
     if (this._id.length === 0) {
       throw new Error("Id is required");
