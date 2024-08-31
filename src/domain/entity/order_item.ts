@@ -32,6 +32,14 @@ export class OrderItem {
     return this._quantity;
   }
 
+  set quantity(quantity: number) {
+    if (quantity <= 0) {
+      throw new Error("Quantity must be greater than 0");
+    }
+    this._quantity = quantity;
+  }
+
+  
   get productId(): string {
     return this._productId;
   }
